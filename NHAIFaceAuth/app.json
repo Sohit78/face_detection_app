@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "NHAIFaceAuth",
+    "slug": "NHAIFaceAuth",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "assets/models/**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "The camera is used on-device for face authentication and liveness detection. No images leave this device."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "predictiveBackGestureEnabled": false,
+      "package": "com.sohit88.NHAIFaceAuth"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-asset",
+      "expo-sqlite",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "The camera is used on-device for face authentication and liveness detection. No images leave this device."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "c42c3a0f-3dc5-40e3-9c4d-426def488d28"
+      }
+    }
+  }
+}
